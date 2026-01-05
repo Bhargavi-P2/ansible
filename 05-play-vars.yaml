@@ -12,5 +12,3 @@
         msg: "Hello {{ COURSE }}, Course Duration: {{DURATION}}, Trainer: {{TRAINER}}"
 
 
-
-
