@@ -8,5 +8,4 @@
     takss:
       - name: print course infromation
         ansible.builtin.debug:
-          msg: "Hello {{ COURSE }} Duration: {{DURATION}} Trainer: {{TRAINER}}"
-          
+          msg: "Hello {{ COURSE }}, Course Duration: {{DURATION}}, Trainer: {{TRAINER}}"
