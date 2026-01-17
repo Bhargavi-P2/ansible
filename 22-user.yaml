@@ -2,18 +2,17 @@
   hosts: local
   connection: local
   tasks:
-  - name: chcek roboshop user exits or not
+  - name: check roboshop user exist or not
     ansible.builtin.command: id roboshop
     register: output
     ignore_errors: true
 
   - name: create user
     become: yes
-    ansible.builtin.command:
+    ansible.builtin.command: user add roboshop
     when: output.rc != 0 #it means above task failure
 
   - name: user already exist
     ansible.builtin.debug:
       msg: "user already exist"
     when: output.rc == 0 # it means above task failure
-
