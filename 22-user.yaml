@@ -9,11 +9,11 @@
 
   - name: create user
     become: yes
-    ansible.b.command:
+    ansible.builtin.command:
     when: output.rc != 0 #it means above task failure
 
   - name: user already exist
-    ansible.buitlin.debug:
+    ansible.builtin.debug:
       msg: "user already exist"
     when: output.rc == 0 # it means above task failure
 
