@@ -8,6 +8,7 @@
     ignore_errors: true
 
   - name: create user
+    become: yes
     ansible.b.command:
     when: output.rc != 0 #it means above task failure
 
